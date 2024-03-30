@@ -1,5 +1,27 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
+
+const magazines = [
+  { id: 1, title: 'Architectural Digest', theme: 'architecture', isAvailable: true },
+  { id: 2, title: 'Dwell', theme: 'architecture', isAvailable: true },
+  { id: 3, title: 'Communication Arts', theme: 'design', isAvailable: false },
+];
+
+function ZineRack() {
+  const listZines = magazines.map(zine =>
+    <li
+      key={zine.id}
+      style={{
+        color: zine.isAvailable ? 'green' : 'red'
+      }}
+    >
+      {zine.title}
+    </li>
+  );
+  return (
+    <ul>{listZines}</ul>
+  )
+}
 
 const book = {
 title: 'A Farwell to Ams',
@@ -47,7 +69,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <h1>My Favorite Books</h1>
+        <ZineRack />
+      <h1>My Favorite Readings</h1>
         <Bookshelf />
       </header>
     </div>
