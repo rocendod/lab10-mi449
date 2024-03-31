@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+button {
+  margin-right: 400px;
+  background-color: royalblue;
+  border-color: aqua;
+  color: white;
+}
+
+li {
+  list-style-type: none;
+}
+
+.bookCover {
+  width: 264px;
+  height: 378px;
+}
+
+p {
+  font-size: 12px;
+}
